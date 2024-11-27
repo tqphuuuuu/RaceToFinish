@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\racetofinishh\\racetofinish\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\racetofinish\\permoduleinline.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ue5.4\\5.4\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\racetofinishh\\racetofinish\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\racetofinish\\definitions.racetofinish.h",
+            "c:\\ue5.4\\5.4\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

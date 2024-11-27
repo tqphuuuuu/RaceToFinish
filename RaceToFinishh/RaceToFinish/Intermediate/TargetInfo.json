@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "RaceToFinish",
+			"Path": "..\\Source\\RaceToFinish.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "RaceToFinishEditor",
+			"Path": "..\\Source\\RaceToFinishEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

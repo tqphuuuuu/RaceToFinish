@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\RaceToFinish.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RaceToFinish.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\RaceToFinishEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\RaceToFinish">
+      <UniqueIdentifier>{7C9E1067-4F8F-3658-9E80-4D340B7FDDD8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RaceToFinish\RaceToFinish.Build.cs">
+      <Filter>Source\RaceToFinish</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinish.cpp">
+      <Filter>Source\RaceToFinish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinish.h">
+      <Filter>Source\RaceToFinish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinishCharacter.cpp">
+      <Filter>Source\RaceToFinish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinishCharacter.h">
+      <Filter>Source\RaceToFinish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinishGameMode.cpp">
+      <Filter>Source\RaceToFinish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinishGameMode.h">
+      <Filter>Source\RaceToFinish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinishPlayerController.cpp">
+      <Filter>Source\RaceToFinish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinishPlayerController.h">
+      <Filter>Source\RaceToFinish</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
