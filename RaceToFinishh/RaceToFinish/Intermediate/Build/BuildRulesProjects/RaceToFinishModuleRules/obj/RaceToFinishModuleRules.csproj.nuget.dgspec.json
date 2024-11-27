@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj": {}
+    "C:\\RaceToFinish\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj": {}
   },
   "projects": {
-    "C:\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj": {
+    "C:\\RaceToFinish\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj",
+        "projectUniqueName": "C:\\RaceToFinish\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj",
         "projectName": "RaceToFinishModuleRules",
-        "projectPath": "C:\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj",
+        "projectPath": "C:\\RaceToFinish\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj",
         "packagesPath": "C:\\Users\\TQPhuuuuu\\.nuget\\packages\\",
-        "outputPath": "C:\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\obj\\",
+        "outputPath": "C:\\RaceToFinish\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

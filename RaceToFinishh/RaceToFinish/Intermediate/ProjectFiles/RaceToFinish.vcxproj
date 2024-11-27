@@ -395,13 +395,13 @@
     <None Include="..\..\RaceToFinish.uproject"/>
     <None Include="..\..\Source\RaceToFinish.Target.cs"/>
     <None Include="..\..\Source\RaceToFinishEditor.Target.cs"/>
+    <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Source\RaceToFinish\RaceToFinish.Build.cs"/>
-    <ClCompile Include="..\..\Source\RaceToFinish\NPC\NPC.cpp" />
     <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinish.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -426,9 +426,12 @@
     <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinishPlayerController.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\RaceToFinish\NPC\NPC.h" />
+    <ClCompile Include="..\..\Source\RaceToFinish\NPC\NPC.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\NPC\NPC.h">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
   </ItemGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>

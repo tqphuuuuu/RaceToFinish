@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\RaceToFinishh\\RaceToFinish\\Source\\RaceToFinish\\RaceToFinish.Build.cs",
-		"C:\\RaceToFinishh\\RaceToFinish\\Source\\RaceToFinish.Target.cs",
-		"C:\\RaceToFinishh\\RaceToFinish\\Source\\RaceToFinishEditor.Target.cs"
+		"C:\\RaceToFinish\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Source\\RaceToFinish\\RaceToFinish.Build.cs",
+		"C:\\RaceToFinish\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Source\\RaceToFinish.Target.cs",
+		"C:\\RaceToFinish\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Source\\RaceToFinishEditor.Target.cs"
 	],
 	"EngineVersion": "5.5.0"
 }

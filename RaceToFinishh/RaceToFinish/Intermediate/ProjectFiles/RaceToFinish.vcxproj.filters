@@ -11,6 +11,7 @@
     <None Include="..\..\Source\RaceToFinishEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -58,6 +59,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinishPlayerController.h">
       <Filter>Source\RaceToFinish</Filter>
+    </ClCompile>
+    <Filter Include="Source\RaceToFinish\NPC">
+      <UniqueIdentifier>{6629A08C-0E2C-314C-A16E-7FF63230C108}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RaceToFinish\NPC\NPC.cpp">
+      <Filter>Source\RaceToFinish\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\NPC\NPC.h">
+      <Filter>Source\RaceToFinish\NPC</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
