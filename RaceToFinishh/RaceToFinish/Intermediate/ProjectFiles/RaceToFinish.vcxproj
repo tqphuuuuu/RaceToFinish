@@ -396,6 +396,7 @@
     <None Include="..\..\Source\RaceToFinish.Target.cs"/>
     <None Include="..\..\Source\RaceToFinishEditor.Target.cs"/>
     <None Include="..\..\.vsconfig"/>
+    <None Include="..\..\RaceToFinish.sln.DotSettings.user"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
