@@ -1,6 +1,6 @@
 /I "."
-/I "C:\RaceToFinishh\RaceToFinish\Intermediate\Build\Win64\UnrealEditor\Inc\RaceToFinish\UHT"
-/I "C:\RaceToFinishh\RaceToFinish\Source"
+/I "C:\RaceToFinish\RaceToFinish\RaceToFinishh\RaceToFinish\Intermediate\Build\Win64\UnrealEditor\Inc\RaceToFinish\UHT"
+/I "C:\RaceToFinish\RaceToFinish\RaceToFinishh\RaceToFinish\Source"
 /I "Runtime\Core\Public"
 /I "Runtime\Core\Internal"
 /I "Runtime\TraceLog\Public"
