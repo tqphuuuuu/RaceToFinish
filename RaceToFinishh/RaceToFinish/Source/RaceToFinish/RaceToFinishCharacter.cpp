@@ -64,6 +64,23 @@ void ARaceToFinishCharacter::Tick(float DeltaSeconds)
 	// In ra trên màn hình
 	UKismetSystemLibrary::PrintString(this, MouseString, true, true, FLinearColor::Green, 5.0f);*/
 
+	// Lấy vector vận tốc của nhân vật
+	FVector Velocity = GetVelocity();
+	Velocity.Z = 0; // Loại bỏ thành phần Z để giữ cho camera quay trong mặt phẳng 2D
+
+	// Nếu có chuyển động
+	if (!Velocity.IsNearlyZero())
+	{
+		// Tính toán góc quay từ vector vận tốc
+		FRotator NewRotation = Velocity.Rotation();
+
+		// Cập nhật hướng quay của camera
+		FRotator CurrentRotation = CameraBoom->GetComponentRotation(); // CameraBoom là Spring Arm của camera
+
+		// Tạo một giá trị quay mới để hướng camera về phía di chuyển
+		CameraBoom->SetWorldRotation(FRotator(0, NewRotation.Yaw, 0)); // Yaw là góc quay quanh trục Z
+	}
+
 }
 
 void ARaceToFinishCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const

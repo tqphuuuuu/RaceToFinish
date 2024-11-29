@@ -5,6 +5,9 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"D:/RaceToFinish/RaceToFinishh/RaceToFinish/Content/TopDown/Blueprints/BP_GameMode.uasset",
+				"D:/RaceToFinish/RaceToFinishh/RaceToFinish/Content/TopDown/Blueprints/BP_TopDownCharacter.uasset",
+				"D:/RaceToFinish/RaceToFinishh/RaceToFinish/Content/__ExternalActors__/TopDown/Maps/TopDownMap/C/Y0/E0W9EKUMB8MBCRI88CG0GW.uasset",
 				"C:/RaceToFinish/RaceToFinish/RaceToFinishh/RaceToFinish/Content/NPC/BP_NPC.uasset",
 				"C:/RaceToFinish/RaceToFinish/RaceToFinishh/RaceToFinish/Content/TopDown/Blueprints/BP_TopDownCharacter.uasset",
 				"C:/RaceToFinish/RaceToFinish/RaceToFinishh/RaceToFinish/Content/TopDown/Blueprints/BP_TopDownPlayerController.uasset",
