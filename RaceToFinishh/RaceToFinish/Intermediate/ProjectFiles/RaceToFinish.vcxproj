@@ -403,7 +403,9 @@
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Source\RaceToFinish\RaceToFinish.Build.cs"/>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer.cpp" />
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SpinnyHammer.cpp" />
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SwingHammer.cpp" />
     <ClCompile Include="..\..\Source\RaceToFinish\RaceToFinish.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -436,7 +438,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\RaceToFinish\Obstacle\Hammer.h" />
     <ClInclude Include="..\..\Source\RaceToFinish\Obstacle\SpinnyHammer.h" />
+    <ClInclude Include="..\..\Source\RaceToFinish\Obstacle\SwingHammer.h" />
   </ItemGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>

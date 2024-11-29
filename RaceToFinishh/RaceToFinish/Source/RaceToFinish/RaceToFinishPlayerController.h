@@ -48,7 +48,10 @@ public:
 	
 	// Move Action
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
-	UInputAction* MoveAction;
+	UInputAction* MoveForward;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* MoveRight;
 
 protected:
 	/** True if the controlled character should navigate to the mouse cursor. */
@@ -63,8 +66,9 @@ protected:
 	/** Input handlers for SetDestination action. */
 	void OnInputStarted();
 	void OnSetDestinationTriggered();
-	void OnMoveAction(const FInputActionValue& Value);
-
+	void Move(const FInputActionValue& Value);
+	void OnMoveForward(const FInputActionValue& Value);
+	void OnMoveRight(const FInputActionValue& Value);
 
 private:
 	FVector CachedDestination;
@@ -75,6 +79,7 @@ private:
 public:
 	UFUNCTION(Server, Unreliable)
 	void Server_Test(FVector MouseLocation);
+
 };
 
 

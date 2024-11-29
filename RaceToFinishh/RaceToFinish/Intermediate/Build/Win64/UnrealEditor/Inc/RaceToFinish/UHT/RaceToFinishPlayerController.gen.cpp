@@ -145,7 +145,7 @@ struct Z_Construct_UClass_ARaceToFinishPlayerController_Statics
 		{ "ToolTip", "Jump Input Action" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveAction_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveForward_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
 #if !UE_BUILD_SHIPPING
@@ -156,13 +156,19 @@ struct Z_Construct_UClass_ARaceToFinishPlayerController_Statics
 		{ "ToolTip", "Move Action" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveRight_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "RaceToFinishPlayerController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ShortPressThreshold;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FXCursor;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SetDestinationClickAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SetDestinationTouchAction;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveForward;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveRight;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -179,14 +185,16 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishP
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_DefaultMappingContext = { "DefaultMappingContext", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, DefaultMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultMappingContext_MetaData), NewProp_DefaultMappingContext_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_SetDestinationClickAction = { "SetDestinationClickAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, SetDestinationClickAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SetDestinationClickAction_MetaData), NewProp_SetDestinationClickAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_SetDestinationTouchAction = { "SetDestinationTouchAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, SetDestinationTouchAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SetDestinationTouchAction_MetaData), NewProp_SetDestinationTouchAction_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_MoveForward = { "MoveForward", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, MoveForward), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveForward_MetaData), NewProp_MoveForward_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_MoveRight = { "MoveRight", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, MoveRight), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveRight_MetaData), NewProp_MoveRight_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARaceToFinishPlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_ShortPressThreshold,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_FXCursor,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_DefaultMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_SetDestinationClickAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_SetDestinationTouchAction,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_MoveAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_MoveForward,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_MoveRight,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARaceToFinishPlayerController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ARaceToFinishPlayerController_Statics::DependentSingletons[])() = {
@@ -229,10 +237,10 @@ ARaceToFinishPlayerController::~ARaceToFinishPlayerController() {}
 struct Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARaceToFinishPlayerController, ARaceToFinishPlayerController::StaticClass, TEXT("ARaceToFinishPlayerController"), &Z_Registration_Info_UClass_ARaceToFinishPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARaceToFinishPlayerController), 3250106735U) },
+		{ Z_Construct_UClass_ARaceToFinishPlayerController, ARaceToFinishPlayerController::StaticClass, TEXT("ARaceToFinishPlayerController"), &Z_Registration_Info_UClass_ARaceToFinishPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARaceToFinishPlayerController), 2581828084U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_1439123137(TEXT("/Script/RaceToFinish"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_1901855579(TEXT("/Script/RaceToFinish"),
 	Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

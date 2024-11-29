@@ -73,8 +73,9 @@ void ARaceToFinishPlayerController::SetupInputComponent()
 		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnSetDestinationTriggered);
 
 		// Move Action
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnMoveAction);
-
+		EnhancedInputComponent->BindAction(MoveForward, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnMoveForward);
+		EnhancedInputComponent->BindAction(MoveRight, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnMoveRight);
+		
 
 	}
 	else
@@ -114,10 +115,32 @@ void ARaceToFinishPlayerController::OnSetDestinationTriggered()
 	
 }
 
-void ARaceToFinishPlayerController::OnMoveAction(const FInputActionValue& Value)
+void ARaceToFinishPlayerController::OnMoveForward(const FInputActionValue& Value)
 {
 	const FVector2D MovementVector = Value.Get<FVector2D>();
+	const FVector Forward = GetPawn()->GetActorForwardVector();
+    
+	// Thêm lực di chuyển theo hướng tiến (hoặc lùi)
+	GetPawn()->AddMovementInput(Forward, MovementVector.Y);
+}
 
+// Di chuyển sang trái/phải (theo trục X)
+void ARaceToFinishPlayerController::OnMoveRight(const FInputActionValue& Value)
+{
+	
+		const FVector2D MovementVector = Value.Get<FVector2D>();
+		const FVector Right = GetPawn()->GetActorRightVector();
+    
+		// Thêm lực di chuyển sang trái hoặc phải
+		GetPawn()->AddMovementInput(Right, MovementVector.X);
+    
+	// Nếu bạn muốn có sự kiện "Complete" cho MoveRight
+	// Bạn có thể trigger một event khi MoveRight kết thúc.
+}
+	
+
+	
+			/*
 			if (this != nullptr)
 			{
 				// find out which way is forward
@@ -133,7 +156,24 @@ void ARaceToFinishPlayerController::OnMoveAction(const FInputActionValue& Value)
 				// add movement 
 				GetPawn()->AddMovementInput(ForwardDirection, MovementVector.Y);
 				GetPawn()->AddMovementInput(RightDirection, MovementVector.X);
-			}
+			}*/
+
+
+/*
+void ARaceToFinishPlayerController::OnMoveForward(const FInputActionValue& Value)
+{
+	// Get the axis value for forward movement
+	float AxisValue = Value.Get<float>();
+	GetPawn()->AddMovementInput(GetPawn()->GetActorForwardVector(), AxisValue);
+	
 }
 
+// Handle moving right/left
+void ARaceToFinishPlayerController::OnMoveRight(const FInputActionValue& Value)
+{
+	// Get the axis value for right movement
+	float AxisValue = Value.Get<float>();
+	GetPawn()->AddMovementInput(GetPawn()->GetActorRightVector(), AxisValue);
+}
+*/
 
