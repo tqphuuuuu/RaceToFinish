@@ -75,6 +75,7 @@ void ARaceToFinishPlayerController::SetupInputComponent()
 		// Move Action
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnMoveAction);
 
+
 	}
 	else
 	{

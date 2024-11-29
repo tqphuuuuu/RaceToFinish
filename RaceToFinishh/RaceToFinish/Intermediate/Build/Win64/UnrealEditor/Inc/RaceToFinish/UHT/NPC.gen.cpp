@@ -77,14 +77,14 @@ ANPC::~ANPC() {}
 // End Class ANPC
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_NPC_NPC_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_NPC_NPC_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ANPC, ANPC::StaticClass, TEXT("ANPC"), &Z_Registration_Info_UClass_ANPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPC), 244767803U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_NPC_NPC_h_2015764126(TEXT("/Script/RaceToFinish"),
-	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_NPC_NPC_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_NPC_NPC_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_NPC_NPC_h_2015764126(TEXT("/Script/RaceToFinish"),
+	Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_NPC_NPC_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_NPC_NPC_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

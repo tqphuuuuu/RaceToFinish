@@ -26,6 +26,7 @@ ARaceToFinishCharacter::ARaceToFinishCharacter()
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
 
+
 	// Configure character movement
 	GetCharacterMovement()->bOrientRotationToMovement = true; // Rotate character to moving direction
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 640.f, 0.f);
@@ -38,7 +39,7 @@ ARaceToFinishCharacter::ARaceToFinishCharacter()
 	CameraBoom->SetUsingAbsoluteRotation(true); // Don't want arm to rotate when character does
 	CameraBoom->TargetArmLength = 800.f;
 	CameraBoom->SetRelativeRotation(FRotator(-60.f, 0.f, 0.f));
-	CameraBoom->bDoCollisionTest = false; // Don't want to pull camera in when it collides with level
+	CameraBoom->bDoCollisionTest = true; // Don't want to pull camera in when it collides with level
 
 	// Create a camera...
 	TopDownCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("TopDownCamera"));
@@ -54,18 +55,13 @@ void ARaceToFinishCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 
-	FVector Location = GetActorLocation();
-	FRotator Temp =  UKismetMathLibrary::FindLookAtRotation(Location , Mouse);
-	Temp.Roll = GetActorRotation().Roll;
-	Temp.Pitch = GetActorRotation().Pitch;
-	SetActorRotation(Temp);
-	/*FString MouseString = FString::Printf(TEXT("Mouse Position - X: %f, Y: %f, Z: %f"), Mouse.X, Mouse.Y, Mouse.Z);
-
-	// In ra trên màn hình
-	UKismetSystemLibrary::PrintString(this, MouseString, true, true, FLinearColor::Green, 5.0f);*/
-
-	// Lấy vector vận tốc của nhân vật
 	FVector Velocity = GetVelocity();
+	if (Velocity.SizeSquared() > 0.0f) // Kiểm tra xem nhân vật có di chuyển hay không
+	{
+		FRotator NewRotation = Velocity.Rotation(); // Chuyển hướng di chuyển thành góc quay
+		SetActorRotation(NewRotation); // Cập nhật lại hướng quay của nhân vật
+	}
+	
 	Velocity.Z = 0; // Loại bỏ thành phần Z để giữ cho camera quay trong mặt phẳng 2D
 
 	// Nếu có chuyển động
@@ -74,12 +70,25 @@ void ARaceToFinishCharacter::Tick(float DeltaSeconds)
 		// Tính toán góc quay từ vector vận tốc
 		FRotator NewRotation = Velocity.Rotation();
 
-		// Cập nhật hướng quay của camera
+		// Giới hạn Pitch của camera để không bị quá thấp hoặc quá cao
+		const float MinPitch = -30.0f;  // Giới hạn dưới
+		const float MaxPitch = 30.0f;   // Giới hạn trên
+
+		// Giới hạn Pitch trong khoảng từ MinPitch đến MaxPitch
+		NewRotation.Pitch = FMath::Clamp(NewRotation.Pitch, MinPitch, MaxPitch);
+
+		// Lấy góc quay hiện tại của camera
 		FRotator CurrentRotation = CameraBoom->GetComponentRotation(); // CameraBoom là Spring Arm của camera
 
-		// Tạo một giá trị quay mới để hướng camera về phía di chuyển
-		CameraBoom->SetWorldRotation(FRotator(0, NewRotation.Yaw, 0)); // Yaw là góc quay quanh trục Z
+		// Lưu nguyên giá trị Pitch của camera nhưng cập nhật Yaw (hoặc Roll) từ hướng di chuyển
+		NewRotation.Pitch = CurrentRotation.Pitch;  // Giữ nguyên Pitch của camera
+		// Nếu bạn muốn mượt mà hóa góc quay:
+		NewRotation.Yaw = FMath::Lerp(CurrentRotation.Yaw, NewRotation.Yaw, 0.1f); // Thay đổi Yaw một cách mượt mà
+
+		// Cập nhật lại góc quay cho Camera Boom (Spring Arm)
+		CameraBoom->SetWorldRotation(NewRotation); // Cập nhật hướng quay của camera
 	}
+
 
 }
 
