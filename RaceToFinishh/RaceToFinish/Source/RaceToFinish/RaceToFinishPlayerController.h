@@ -47,11 +47,13 @@ public:
 	UInputAction* SetDestinationTouchAction;
 	
 	// Move Action
+	// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	// UInputAction* MoveForward;
+	//
+	// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	// UInputAction* MoveRight;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
-	UInputAction* MoveForward;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
-	UInputAction* MoveRight;
+	UInputAction* OnMove;
 
 protected:
 	/** True if the controlled character should navigate to the mouse cursor. */
@@ -79,6 +81,10 @@ private:
 public:
 	UFUNCTION(Server, Unreliable)
 	void Server_Test(FVector MouseLocation);
+
+	FVector ForwardVector;
+	
+	FVector RightVector;
 
 };
 

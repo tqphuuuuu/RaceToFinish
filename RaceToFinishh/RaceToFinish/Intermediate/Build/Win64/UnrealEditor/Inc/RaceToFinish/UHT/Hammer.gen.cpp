@@ -10,9 +10,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeHammer() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_AActor();
 RACETOFINISH_API UClass* Z_Construct_UClass_AHammer();
 RACETOFINISH_API UClass* Z_Construct_UClass_AHammer_NoRegister();
+RACETOFINISH_API UClass* Z_Construct_UClass_ARotaryHammer();
 UPackage* Z_Construct_UPackage__Script_RaceToFinish();
 // End Cross Module References
 
@@ -40,7 +40,7 @@ struct Z_Construct_UClass_AHammer_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 UObject* (*const Z_Construct_UClass_AHammer_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_AActor,
+	(UObject* (*)())Z_Construct_UClass_ARotaryHammer,
 	(UObject* (*)())Z_Construct_UPackage__Script_RaceToFinish,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AHammer_Statics::DependentSingletons) < 16);
@@ -76,14 +76,14 @@ AHammer::~AHammer() {}
 // End Class AHammer
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_Statics
+struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AHammer, AHammer::StaticClass, TEXT("AHammer"), &Z_Registration_Info_UClass_AHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHammer), 3184188040U) },
+		{ Z_Construct_UClass_AHammer, AHammer::StaticClass, TEXT("AHammer"), &Z_Registration_Info_UClass_AHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHammer), 2132490446U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_640942191(TEXT("/Script/RaceToFinish"),
-	Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_2761891012(TEXT("/Script/RaceToFinish"),
+	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

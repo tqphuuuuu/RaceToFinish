@@ -14,16 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RACETOFINISH_SpinnyHammer_generated_h
 
-#define FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASpinnyHammer(); \
 	friend struct Z_Construct_UClass_ASpinnyHammer_Statics; \
 public: \
-	DECLARE_CLASS(ASpinnyHammer, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RaceToFinish"), NO_API) \
+	DECLARE_CLASS(ASpinnyHammer, ARotaryHammer, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RaceToFinish"), NO_API) \
 	DECLARE_SERIALIZER(ASpinnyHammer)
 
 
-#define FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASpinnyHammer(ASpinnyHammer&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ASpinnyHammer();
 
 
-#define FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_9_PROLOG
-#define FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_12_GENERATED_BODY \
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_10_PROLOG
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_12_ENHANCED_CONSTRUCTORS \
+	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_13_INCLASS_NO_PURE_DECLS \
+	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> RACETOFINISH_API UClass* StaticClass<class ASpinnyHammer>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h
+#define CURRENT_FILE_ID FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

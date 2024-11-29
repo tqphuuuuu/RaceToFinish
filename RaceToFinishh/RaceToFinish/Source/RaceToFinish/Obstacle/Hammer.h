@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "RotaryHammer.h"
 #include "GameFramework/Actor.h"
 #include "Hammer.generated.h"
 
 UCLASS()
-class RACETOFINISH_API AHammer : public AActor
+class RACETOFINISH_API AHammer : public ARotaryHammer
 {
 	GENERATED_BODY()
 

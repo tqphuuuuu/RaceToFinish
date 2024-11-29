@@ -70,5 +70,26 @@
     <ClCompile Include="..\..\Source\RaceToFinish\NPC\NPC.h">
       <Filter>Source\RaceToFinish\NPC</Filter>
     </ClCompile>
+    <Filter Include="Source\RaceToFinish\Obstacle">
+      <UniqueIdentifier>{52BD53AB-24E2-3B60-A821-F6E09D1CEFBA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SpinnyHammer.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SpinnyHammer.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SwingHammer.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SwingHammer.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

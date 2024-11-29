@@ -10,7 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSpinnyHammer() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_AActor();
+RACETOFINISH_API UClass* Z_Construct_UClass_ARotaryHammer();
 RACETOFINISH_API UClass* Z_Construct_UClass_ASpinnyHammer();
 RACETOFINISH_API UClass* Z_Construct_UClass_ASpinnyHammer_NoRegister();
 UPackage* Z_Construct_UPackage__Script_RaceToFinish();
@@ -40,7 +40,7 @@ struct Z_Construct_UClass_ASpinnyHammer_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 UObject* (*const Z_Construct_UClass_ASpinnyHammer_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_AActor,
+	(UObject* (*)())Z_Construct_UClass_ARotaryHammer,
 	(UObject* (*)())Z_Construct_UPackage__Script_RaceToFinish,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASpinnyHammer_Statics::DependentSingletons) < 16);
@@ -76,14 +76,14 @@ ASpinnyHammer::~ASpinnyHammer() {}
 // End Class ASpinnyHammer
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_Statics
+struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASpinnyHammer, ASpinnyHammer::StaticClass, TEXT("ASpinnyHammer"), &Z_Registration_Info_UClass_ASpinnyHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpinnyHammer), 1738824332U) },
+		{ Z_Construct_UClass_ASpinnyHammer, ASpinnyHammer::StaticClass, TEXT("ASpinnyHammer"), &Z_Registration_Info_UClass_ASpinnyHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpinnyHammer), 1395789448U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_2649187689(TEXT("/Script/RaceToFinish"),
-	Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_2850648684(TEXT("/Script/RaceToFinish"),
+	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_SpinnyHammer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

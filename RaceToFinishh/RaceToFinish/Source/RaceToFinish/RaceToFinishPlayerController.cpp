@@ -22,6 +22,9 @@ ARaceToFinishPlayerController::ARaceToFinishPlayerController()
 	DefaultMouseCursor = EMouseCursor::Default;
 	CachedDestination = FVector::ZeroVector;
 	FollowTime = 0.f;
+
+	RightVector = FVector::RightVector;
+	ForwardVector = FVector::ForwardVector;
 }
 
 void ARaceToFinishPlayerController::BeginPlay()
@@ -73,8 +76,8 @@ void ARaceToFinishPlayerController::SetupInputComponent()
 		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnSetDestinationTriggered);
 
 		// Move Action
-		EnhancedInputComponent->BindAction(MoveForward, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnMoveForward);
-		EnhancedInputComponent->BindAction(MoveRight, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnMoveRight);
+		EnhancedInputComponent->BindAction(OnMove, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::Move);
+		//EnhancedInputComponent->BindAction(MoveRight, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnMoveRight);
 		
 
 	}
@@ -115,6 +118,24 @@ void ARaceToFinishPlayerController::OnSetDestinationTriggered()
 	
 }
 
+void ARaceToFinishPlayerController::Move(const FInputActionValue& Value)
+{
+	/*FVector2D Move = Value.Get<FVector2D>();
+	Move.Normalize();
+	const FVector2D MoveValue = Move;
+	if( MoveValue != FVector2D::Zero())
+	{
+		GetPawn()->AddMovementInput(RightVector* MoveValue.X +ForwardVector* MoveValue.Y);
+	}*/
+	const FVector2D MovementVector = Value.Get<FVector2D>();
+	const FVector Forward = GetPawn()->GetActorForwardVector();
+	GetPawn()->AddMovementInput(Forward, MovementVector.Y);
+
+	const FVector Right = GetPawn()->GetActorRightVector();
+	GetPawn()->AddMovementInput(Right, MovementVector.X);
+}
+
+/*
 void ARaceToFinishPlayerController::OnMoveForward(const FInputActionValue& Value)
 {
 	const FVector2D MovementVector = Value.Get<FVector2D>();
@@ -156,24 +177,9 @@ void ARaceToFinishPlayerController::OnMoveRight(const FInputActionValue& Value)
 				// add movement 
 				GetPawn()->AddMovementInput(ForwardDirection, MovementVector.Y);
 				GetPawn()->AddMovementInput(RightDirection, MovementVector.X);
-			}*/
-
-
-/*
-void ARaceToFinishPlayerController::OnMoveForward(const FInputActionValue& Value)
-{
-	// Get the axis value for forward movement
-	float AxisValue = Value.Get<float>();
-	GetPawn()->AddMovementInput(GetPawn()->GetActorForwardVector(), AxisValue);
-	
-}
-
-// Handle moving right/left
-void ARaceToFinishPlayerController::OnMoveRight(const FInputActionValue& Value)
-{
-	// Get the axis value for right movement
-	float AxisValue = Value.Get<float>();
-	GetPawn()->AddMovementInput(GetPawn()->GetActorRightVector(), AxisValue);
-}
+			}
+#1#
 */
+
+
 
