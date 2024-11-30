@@ -79,6 +79,24 @@
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer.h">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\MovingBoard.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\MovingBoard.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Obstacle_Column.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Obstacle_Column.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\RotaryHammer.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\RotaryHammer.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SpinnyHammer.cpp">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>

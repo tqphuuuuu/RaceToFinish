@@ -22,4 +22,22 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	// Vị trí ban đầu và điểm kết thúc cho tấm ván trượt
+	FVector StartLocation;
+	FVector EndLocation;
+
+	// Tốc độ di chuyển
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Speed")
+	float MoveSpeed;
+
+	// Thời gian chuyển động
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Time Move")
+	float MoveTime;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Move")
+	bool bMoveForward;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Distance")
+	float Distance;
 };
