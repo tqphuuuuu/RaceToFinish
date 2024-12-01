@@ -1,14 +1,26 @@
 #include "RotaryHammer.h"
+#include "Components/BoxComponent.h"
+#include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 ARotaryHammer::ARotaryHammer()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	// Default values
-	RotationSpeed = 100.0f;       // Default rotation speed
-	RotationDirection = 1;       // Default direction (clockwise)
+	// Initialize default values
+	RotationSpeed = 100.0f;
+	KnockbackForce = 1000.0f;
+
+	// Create and configure the collision box
+	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
+	RootComponent = CollisionBox;
+	CollisionBox->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	CollisionBox->SetCollisionObjectType(ECC_WorldDynamic);
+	CollisionBox->SetCollisionResponseToAllChannels(ECR_Overlap);
+
+	// Bind the overlap event
+	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &ARotaryHammer::OnHammerOverlapBegin);
 }
 
 // Called when the game starts or when spawned
@@ -22,16 +34,27 @@ void ARotaryHammer::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// Rotate based on speed and direction
-	RotateAroundAxis();
+	// Rotate the hammer
+	RotateAroundAxis(RotationSpeed);
 }
 
-void ARotaryHammer::RotateAroundAxis()
+void ARotaryHammer::RotateAroundAxis(float Speed)
 {
-	// Ensure rotation direction is either 1 or -1
-	RotationDirection = FMath::Clamp(RotationDirection, -1, 1);
-
-	// Apply rotation
-	FRotator RotationDelta(0.f, RotationDirection * RotationSpeed * GetWorld()->DeltaTimeSeconds, 0.f);
+	FRotator RotationDelta(0.f, Speed * GetWorld()->DeltaTimeSeconds, 0.f);
 	AddActorLocalRotation(RotationDelta);
+}
+
+void ARotaryHammer::OnHammerOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	ACharacter* Character = Cast<ACharacter>(OtherActor);
+	if (Character && Character->GetCharacterMovement())
+	{
+		// Calculate knockback direction
+		FVector HammerLocation = GetActorLocation();
+		FVector CharacterLocation = Character->GetActorLocation();
+		FVector KnockbackDirection = (CharacterLocation - HammerLocation).GetSafeNormal();
+
+		// Apply knockback force
+		Character->LaunchCharacter(KnockbackDirection * KnockbackForce, true, true);
+	}
 }

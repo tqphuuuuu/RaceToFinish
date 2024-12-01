@@ -13,7 +13,7 @@ public:
 	// Sets default values for this actor's properties
 	ARotaryHammer();
 
-	void RotateAroundAxis();
+	void RotateAroundAxis(float RotationSpeed);
 
 protected:
 	// Called when the game starts or when spawned
@@ -23,11 +23,26 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Speed of rotation, editable in the editor
+	// Speed of rotation
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotation Settings")
 	float RotationSpeed;
 
-	// Direction of rotation: 1 for clockwise, -1 for counter-clockwise
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotation Settings")
-	int32 RotationDirection;
+	// Knockback force
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Knockback Settings")
+	float KnockbackForce;
+
+	// Collision component
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Collision")
+	class UBoxComponent* CollisionBox;
+
+private:
+	// Handle overlap events
+	UFUNCTION()
+	void OnHammerOverlapBegin(
+		UPrimitiveComponent* OverlappedComponent,
+		AActor* OtherActor,
+		UPrimitiveComponent* OtherComp,
+		int32 OtherBodyIndex,
+		bool bFromSweep,
+		const FHitResult& SweepResult);
 };

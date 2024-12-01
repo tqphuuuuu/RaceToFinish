@@ -9,10 +9,17 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
 #ifdef RACETOFINISH_RotaryHammer_generated_h
 #error "RotaryHammer.generated.h already included, missing '#pragma once' in RotaryHammer.h"
 #endif
 #define RACETOFINISH_RotaryHammer_generated_h
+
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnHammerOverlapBegin);
+
 
 #define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_10_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +46,7 @@ public: \
 #define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_10_INCLASS_NO_PURE_DECLS \
 	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_10_ENHANCED_CONSTRUCTORS \
 private: \
