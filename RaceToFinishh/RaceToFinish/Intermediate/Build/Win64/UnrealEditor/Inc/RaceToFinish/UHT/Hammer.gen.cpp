@@ -79,10 +79,10 @@ AHammer::~AHammer() {}
 struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AHammer, AHammer::StaticClass, TEXT("AHammer"), &Z_Registration_Info_UClass_AHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHammer), 2132490446U) },
+		{ Z_Construct_UClass_AHammer, AHammer::StaticClass, TEXT("AHammer"), &Z_Registration_Info_UClass_AHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHammer), 2371880089U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_2761891012(TEXT("/Script/RaceToFinish"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_4032879342(TEXT("/Script/RaceToFinish"),
 	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Hammer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

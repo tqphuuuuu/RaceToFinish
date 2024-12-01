@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -15,7 +13,7 @@ public:
 	// Sets default values for this actor's properties
 	ARotaryHammer();
 
-	void RotateAroundAxis(float RotationSpeed);
+	void RotateAroundAxis();
 
 protected:
 	// Called when the game starts or when spawned
@@ -25,6 +23,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Speed of rotation, editable in the editor
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotation Settings")
 	float RotationSpeed;
 
+	// Direction of rotation: 1 for clockwise, -1 for counter-clockwise
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotation Settings")
+	int32 RotationDirection;
 };

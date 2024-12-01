@@ -5964,23 +5964,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tranq\\.nuget\\packages\\": {},
+    "C:\\Users\\OS\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj",
+      "projectUniqueName": "E:\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj",
       "projectName": "RaceToFinishModuleRules",
-      "projectPath": "D:\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj",
-      "packagesPath": "C:\\Users\\tranq\\.nuget\\packages\\",
-      "outputPath": "D:\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\obj\\",
+      "projectPath": "E:\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\RaceToFinishModuleRules.csproj",
+      "packagesPath": "C:\\Users\\OS\\.nuget\\packages\\",
+      "outputPath": "E:\\RaceToFinish\\RaceToFinishh\\RaceToFinish\\Intermediate\\Build\\BuildRulesProjects\\RaceToFinishModuleRules\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\tranq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\OS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5989,24 +5989,23 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\UE5.4\\5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj": {
-              "projectPath": "D:\\UE5.4\\5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj"
+            "E:\\UE5.4\\5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj": {
+              "projectPath": "E:\\UE5.4\\5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj"
             },
-            "D:\\UE5.4\\5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5Rules\\UE5Rules.csproj": {
-              "projectPath": "D:\\UE5.4\\5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5Rules\\UE5Rules.csproj"
+            "E:\\UE5.4\\5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5Rules\\UE5Rules.csproj": {
+              "projectPath": "E:\\UE5.4\\5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5Rules\\UE5Rules.csproj"
             },
-            "D:\\UE5.4\\5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.Build\\EpicGames.Build.csproj": {
-              "projectPath": "D:\\UE5.4\\5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.Build\\EpicGames.Build.csproj"
+            "E:\\UE5.4\\5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.Build\\EpicGames.Build.csproj": {
+              "projectPath": "E:\\UE5.4\\5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.Build\\EpicGames.Build.csproj"
             },
-            "D:\\UE5.4\\5.4\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj": {
-              "projectPath": "D:\\UE5.4\\5.4\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj"
+            "E:\\UE5.4\\5.4\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj": {
+              "projectPath": "E:\\UE5.4\\5.4\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj"
             }
           }
         }
@@ -6041,7 +6040,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

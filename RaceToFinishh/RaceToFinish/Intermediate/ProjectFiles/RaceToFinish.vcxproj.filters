@@ -79,16 +79,34 @@
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer.h">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer_Cylinder.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer_Cylinder.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer_RotaryPink.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer_RotaryPink.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer_Spinny.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Hammer_Spinny.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\MovingBoard.cpp">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\MovingBoard.h">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Obstacle_Column.cpp">
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Moving_ObstacleRail.cpp">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Obstacle_Column.h">
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Moving_ObstacleRail.h">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\RotaryHammer.cpp">
@@ -97,16 +115,16 @@
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\RotaryHammer.h">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SpinnyHammer.cpp">
-      <Filter>Source\RaceToFinish\Obstacle</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SpinnyHammer.h">
-      <Filter>Source\RaceToFinish\Obstacle</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SwingHammer.cpp">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\SwingHammer.h">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Trampoline.cpp">
+      <Filter>Source\RaceToFinish\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RaceToFinish\Obstacle\Trampoline.h">
       <Filter>Source\RaceToFinish\Obstacle</Filter>
     </ClCompile>
   </ItemGroup>
