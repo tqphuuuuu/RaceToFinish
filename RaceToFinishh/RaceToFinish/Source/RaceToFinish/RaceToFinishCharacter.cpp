@@ -55,7 +55,7 @@ void ARaceToFinishCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 
-	FVector Velocity = GetVelocity();
+	/*FVector Velocity = GetVelocity();
 	if (Velocity.SizeSquared() > 0.0f) // Kiểm tra xem nhân vật có di chuyển hay không
 	{
 		FRotator NewRotation = Velocity.Rotation(); // Chuyển hướng di chuyển thành góc quay
@@ -92,6 +92,7 @@ void ARaceToFinishCharacter::Tick(float DeltaSeconds)
 		CameraBoom->SetWorldRotation(NewRotation); // Cập nhật hướng quay của camera
 		
 	}
+	*/
 
 
 }

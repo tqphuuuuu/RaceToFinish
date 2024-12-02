@@ -55,6 +55,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* OnMove;
 
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* JumpAction;
+
+	
+	UPROPERTY(BlueprintReadWrite,Replicated)
+	bool bJump;
+
 protected:
 	/** True if the controlled character should navigate to the mouse cursor. */
 	uint32 bMoveToMouseCursor : 1;
@@ -69,8 +77,8 @@ protected:
 	void OnInputStarted();
 	void OnSetDestinationTriggered();
 	void Move(const FInputActionValue& Value);
-	void OnMoveForward(const FInputActionValue& Value);
-	void OnMoveRight(const FInputActionValue& Value);
+	void Jump();
+	void StopJumping();
 
 private:
 	FVector CachedDestination;
@@ -85,6 +93,9 @@ public:
 	FVector ForwardVector;
 	
 	FVector RightVector;
+
+	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
+
 
 };
 

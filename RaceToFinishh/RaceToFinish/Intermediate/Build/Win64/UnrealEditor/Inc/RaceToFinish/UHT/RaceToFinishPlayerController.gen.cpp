@@ -156,6 +156,15 @@ struct Z_Construct_UClass_ARaceToFinishPlayerController_Statics
 		{ "ToolTip", "Move Action\nUPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = \"true\"))\nUInputAction* MoveForward;\n\nUPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = \"true\"))\nUInputAction* MoveRight;" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_JumpAction_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "RaceToFinishPlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bJump_MetaData[] = {
+		{ "Category", "RaceToFinishPlayerController" },
+		{ "ModuleRelativePath", "RaceToFinishPlayerController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ShortPressThreshold;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FXCursor;
@@ -163,6 +172,9 @@ struct Z_Construct_UClass_ARaceToFinishPlayerController_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SetDestinationClickAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SetDestinationTouchAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OnMove;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
+	static void NewProp_bJump_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bJump;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -180,6 +192,12 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishP
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_SetDestinationClickAction = { "SetDestinationClickAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, SetDestinationClickAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SetDestinationClickAction_MetaData), NewProp_SetDestinationClickAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_SetDestinationTouchAction = { "SetDestinationTouchAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, SetDestinationTouchAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SetDestinationTouchAction_MetaData), NewProp_SetDestinationTouchAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_OnMove = { "OnMove", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, OnMove), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnMove_MetaData), NewProp_OnMove_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARaceToFinishPlayerController, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpAction_MetaData), NewProp_JumpAction_MetaData) };
+void Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_bJump_SetBit(void* Obj)
+{
+	((ARaceToFinishPlayerController*)Obj)->bJump = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_bJump = { "bJump", nullptr, (EPropertyFlags)0x0010000000000024, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ARaceToFinishPlayerController), &Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_bJump_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bJump_MetaData), NewProp_bJump_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARaceToFinishPlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_ShortPressThreshold,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_FXCursor,
@@ -187,6 +205,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARaceToFi
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_SetDestinationClickAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_SetDestinationTouchAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_OnMove,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_JumpAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARaceToFinishPlayerController_Statics::NewProp_bJump,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARaceToFinishPlayerController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ARaceToFinishPlayerController_Statics::DependentSingletons[])() = {
@@ -221,19 +241,26 @@ template<> RACETOFINISH_API UClass* StaticClass<ARaceToFinishPlayerController>()
 {
 	return ARaceToFinishPlayerController::StaticClass();
 }
+void ARaceToFinishPlayerController::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+{
+	static const FName Name_bJump(TEXT("bJump"));
+	const bool bIsValid = true
+		&& Name_bJump == ClassReps[(int32)ENetFields_Private::bJump].Property->GetFName();
+	checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ARaceToFinishPlayerController"));
+}
 DEFINE_VTABLE_PTR_HELPER_CTOR(ARaceToFinishPlayerController);
 ARaceToFinishPlayerController::~ARaceToFinishPlayerController() {}
 // End Class ARaceToFinishPlayerController
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_Statics
+struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARaceToFinishPlayerController, ARaceToFinishPlayerController::StaticClass, TEXT("ARaceToFinishPlayerController"), &Z_Registration_Info_UClass_ARaceToFinishPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARaceToFinishPlayerController), 1919245551U) },
+		{ Z_Construct_UClass_ARaceToFinishPlayerController, ARaceToFinishPlayerController::StaticClass, TEXT("ARaceToFinishPlayerController"), &Z_Registration_Info_UClass_ARaceToFinishPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARaceToFinishPlayerController), 2563473736U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_225122011(TEXT("/Script/RaceToFinish"),
-	Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_1721959359(TEXT("/Script/RaceToFinish"),
+	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_RaceToFinishPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

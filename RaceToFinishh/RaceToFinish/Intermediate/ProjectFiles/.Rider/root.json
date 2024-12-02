@@ -93,32 +93,32 @@
 		{
 			"Configuration": "DebugGame",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "DebugGame",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "DebugGame",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Debug",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Debug",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Debug",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Development",
@@ -168,17 +168,17 @@
 		{
 			"Configuration": "Development",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Development",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Development",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Shipping",
@@ -213,17 +213,17 @@
 		{
 			"Configuration": "Shipping",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Shipping",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Shipping",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Test",
@@ -258,17 +258,17 @@
 		{
 			"Configuration": "Test",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Test",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		},
 		{
 			"Configuration": "Test",
 			"Platform": "Win64",
-			"Target": "Game"
+			"Target": "Program"
 		}
 	]
 }

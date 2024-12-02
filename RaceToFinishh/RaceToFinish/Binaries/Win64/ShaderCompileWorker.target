@@ -17,7 +17,7 @@
 		"IsLicenseeVersion": 0,
 		"IsPromotedBuild": 0,
 		"BranchName": "UE5",
-		"BuildId": "85684d0b-9e2d-4d18-9483-45d5cd72643d"
+		"BuildId": "8f7872fa-c5fd-4905-a404-b2f316dd7ee2"
 	},
 	"BuildProducts": [
 		{
@@ -566,6 +566,10 @@
 		}
 	],
 	"RuntimeDependencies": [
+		{
+			"Path": "$(ProjectDir)/RaceToFinish.uproject",
+			"Type": "UFS"
+		},
 		{
 			"Path": "$(EngineDir)/Binaries/ThirdParty/DbgHelp/dbghelp.dll",
 			"Type": "NonUFS"
@@ -3537,10 +3541,6 @@
 		{
 			"Path": "$(EngineDir)/Extras/GPUDumpViewer/OpenGPUDumpViewer.sh",
 			"Type": "DebugNonUFS"
-		},
-		{
-			"Path": "$(ProjectDir)/RaceToFinish.uproject",
-			"Type": "UFS"
 		}
 	],
 	"AdditionalProperties": [

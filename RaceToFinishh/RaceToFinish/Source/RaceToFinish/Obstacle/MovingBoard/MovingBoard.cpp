@@ -3,6 +3,8 @@
 
 #include "MovingBoard.h"
 
+#include "Kismet/KismetSystemLibrary.h"
+
 
 // Sets default values
 AMovingBoard::AMovingBoard()
@@ -20,7 +22,6 @@ AMovingBoard::AMovingBoard()
 void AMovingBoard::BeginPlay()
 {
 	Super::BeginPlay();
-
 	// Lấy vị trí ban đầu và điểm kết thúc
 	StartLocation = GetActorLocation();
 	EndLocation = StartLocation + FVector(0.f, Distance, 0.f); // 1000 đơn vị di chuyển theo trục X
@@ -30,10 +31,16 @@ void AMovingBoard::BeginPlay()
 // Called every frame
 void AMovingBoard::Tick(float DeltaTime)
 {
+
 	Super::Tick(DeltaTime);
 	MoveTime += DeltaTime;
 
 	// Nếu đang di chuyển về phía trước
+	
+}
+void AMovingBoard::MoveBoard_Implementation()
+{
+	UKismetSystemLibrary::PrintString(this,"Tick");
 	if (bMoveForward)
 	{
 		// Di chuyển tấm ván về phía điểm kết thúc

@@ -40,4 +40,10 @@ public:
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Distance")
 	float Distance;
+
+	UFUNCTION(Server,unreliable	)
+	void MoveBoard();
+
+	
 };
+

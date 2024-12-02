@@ -12,6 +12,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "Engine/LocalPlayer.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Net/UnrealNetwork.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -77,6 +78,8 @@ void ARaceToFinishPlayerController::SetupInputComponent()
 
 		// Move Action
 		EnhancedInputComponent->BindAction(OnMove, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::Move);
+		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::Jump);
+		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ARaceToFinishPlayerController::StopJumping);
 		//EnhancedInputComponent->BindAction(MoveRight, ETriggerEvent::Triggered, this, &ARaceToFinishPlayerController::OnMoveRight);
 		
 
@@ -157,6 +160,42 @@ void ARaceToFinishPlayerController::Move(const FInputActionValue& Value)
 		GetPawn()-> AddMovementInput(ForwardDirection, MovementVector.X);
 		GetPawn()-> AddMovementInput(RightDirection, MovementVector.Y);
 	}
+}
+
+void ARaceToFinishPlayerController::Jump()
+{
+	UKismetSystemLibrary::PrintString(this, "Jump");
+	
+	// Kiểm tra nhân vật hợp lệ và gọi hàm nhảy
+	if (APawn* ControlledPawn = GetPawn())
+	{
+		if (ACharacter* CharacterPlayer = Cast<ACharacter>(ControlledPawn))
+		{
+			CharacterPlayer->Jump();
+			UKismetSystemLibrary::PrintString(this,"CharacterPlayer->Jump();");
+			bJump = true;
+		}
+	}
+}
+
+
+void ARaceToFinishPlayerController::StopJumping()
+{
+	// Dừng hành động nhảy
+	if (APawn* ControlledPawn = GetPawn())
+	{
+		if (ACharacter* CharacterPlayer = Cast<ACharacter>(ControlledPawn))
+		{
+			CharacterPlayer->StopJumping();
+			bJump = false;
+
+		}
+	}
+}
+void ARaceToFinishPlayerController::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(ARaceToFinishPlayerController, bJump);
 }
 
 

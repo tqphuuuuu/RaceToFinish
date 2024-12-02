@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RACETOFINISH_CheckWin_generated_h
 
-#define FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACheckWin(); \
 	friend struct Z_Construct_UClass_ACheckWin_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ACheckWin)
 
 
-#define FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ACheckWin(ACheckWin&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ACheckWin();
 
 
-#define FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_9_PROLOG
-#define FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_GENERATED_BODY \
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_9_PROLOG
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_ENHANCED_CONSTRUCTORS \
+	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_INCLASS_NO_PURE_DECLS \
+	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> RACETOFINISH_API UClass* StaticClass<class ACheckWin>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h
+#define CURRENT_FILE_ID FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_CheckWin_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
