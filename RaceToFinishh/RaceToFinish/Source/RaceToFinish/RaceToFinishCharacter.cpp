@@ -78,7 +78,10 @@ void ARaceToFinishCharacter::Tick(float DeltaSeconds)
 		NewRotation.Pitch = FMath::Clamp(NewRotation.Pitch, MinPitch, MaxPitch);
 
 		// Lấy góc quay hiện tại của camera
-		FRotator CurrentRotation = CameraBoom->GetComponentRotation(); // CameraBoom là Spring Arm của camera
+		FRotator CurrentRotation = CameraBoom->GetComponentRotation(); // CameraBoom là Spring Arm của
+		FRotator InterpolatedRotation = FMath::RInterpTo(CurrentRotation, NewRotation, GetWorld()->GetDeltaSeconds(), 10.0f);
+		CameraBoom->SetWorldRotation(InterpolatedRotation);
+		
 
 		// Lưu nguyên giá trị Pitch của camera nhưng cập nhật Yaw (hoặc Roll) từ hướng di chuyển
 		NewRotation.Pitch = CurrentRotation.Pitch;  // Giữ nguyên Pitch của camera
@@ -87,6 +90,7 @@ void ARaceToFinishCharacter::Tick(float DeltaSeconds)
 
 		// Cập nhật lại góc quay cho Camera Boom (Spring Arm)
 		CameraBoom->SetWorldRotation(NewRotation); // Cập nhật hướng quay của camera
+		
 	}
 
 

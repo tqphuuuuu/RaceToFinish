@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "RaceToFinish/Obstacle/MovingBoard.h"
+#include "RaceToFinish/Obstacle/MovingBoard/MovingBoard.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMovingBoard() {}
 
@@ -29,15 +29,15 @@ struct Z_Construct_UClass_AMovingBoard_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "Obstacle/MovingBoard.h" },
-		{ "ModuleRelativePath", "Obstacle/MovingBoard.h" },
+		{ "IncludePath", "Obstacle/MovingBoard/MovingBoard.h" },
+		{ "ModuleRelativePath", "Obstacle/MovingBoard/MovingBoard.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[] = {
 		{ "Category", "Speed" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// T\xe1\xbb\x91""c \xc4\x91\xe1\xbb\x99 di chuy\xe1\xbb\x83n\n" },
 #endif
-		{ "ModuleRelativePath", "Obstacle/MovingBoard.h" },
+		{ "ModuleRelativePath", "Obstacle/MovingBoard/MovingBoard.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "T\xe1\xbb\x91""c \xc4\x91\xe1\xbb\x99 di chuy\xe1\xbb\x83n" },
 #endif
@@ -47,18 +47,18 @@ struct Z_Construct_UClass_AMovingBoard_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Th\xe1\xbb\x9di gian chuy\xe1\xbb\x83n \xc4\x91\xe1\xbb\x99ng\n" },
 #endif
-		{ "ModuleRelativePath", "Obstacle/MovingBoard.h" },
+		{ "ModuleRelativePath", "Obstacle/MovingBoard/MovingBoard.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Th\xe1\xbb\x9di gian chuy\xe1\xbb\x83n \xc4\x91\xe1\xbb\x99ng" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bMoveForward_MetaData[] = {
 		{ "Category", "Move" },
-		{ "ModuleRelativePath", "Obstacle/MovingBoard.h" },
+		{ "ModuleRelativePath", "Obstacle/MovingBoard/MovingBoard.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Distance_MetaData[] = {
 		{ "Category", "Distance" },
-		{ "ModuleRelativePath", "Obstacle/MovingBoard.h" },
+		{ "ModuleRelativePath", "Obstacle/MovingBoard/MovingBoard.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
@@ -125,14 +125,14 @@ AMovingBoard::~AMovingBoard() {}
 // End Class AMovingBoard
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_MovingBoard_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMovingBoard, AMovingBoard::StaticClass, TEXT("AMovingBoard"), &Z_Registration_Info_UClass_AMovingBoard, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingBoard), 927316177U) },
+		{ Z_Construct_UClass_AMovingBoard, AMovingBoard::StaticClass, TEXT("AMovingBoard"), &Z_Registration_Info_UClass_AMovingBoard, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingBoard), 1370643066U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_h_110719442(TEXT("/Script/RaceToFinish"),
-	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_MovingBoard_h_1422160521(TEXT("/Script/RaceToFinish"),
+	Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_MovingBoard_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_MovingBoard_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

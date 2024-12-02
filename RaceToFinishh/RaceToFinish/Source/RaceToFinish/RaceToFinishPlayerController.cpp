@@ -127,59 +127,37 @@ void ARaceToFinishPlayerController::Move(const FInputActionValue& Value)
 	{
 		GetPawn()->AddMovementInput(RightVector* MoveValue.X +ForwardVector* MoveValue.Y);
 	}*/
-	const FVector2D MovementVector = Value.Get<FVector2D>();
+
+
+	
+	/*const FVector2D MovementVector = Value.Get<FVector2D>();
 	const FVector Forward = GetPawn()->GetActorForwardVector();
 	GetPawn()->AddMovementInput(Forward, MovementVector.Y);
 
 	const FVector Right = GetPawn()->GetActorRightVector();
-	GetPawn()->AddMovementInput(Right, MovementVector.X);
+	GetPawn()->AddMovementInput(Right, MovementVector.X);*/
+
+
+	// input is a Vector2D
+	FVector2D MovementVector = Value.Get<FVector2D>();
+
+	if (this != nullptr)
+	{
+		// find out which way is forward
+		const FRotator Rotation = GetControlRotation();
+		const FRotator YawRotation(0, Rotation.Yaw, 0);
+
+		// get forward vector
+		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+	
+		// get right vector 
+		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+
+		// add movement 
+		GetPawn()-> AddMovementInput(ForwardDirection, MovementVector.X);
+		GetPawn()-> AddMovementInput(RightDirection, MovementVector.Y);
+	}
 }
-
-/*
-void ARaceToFinishPlayerController::OnMoveForward(const FInputActionValue& Value)
-{
-	const FVector2D MovementVector = Value.Get<FVector2D>();
-	const FVector Forward = GetPawn()->GetActorForwardVector();
-    
-	// Thêm lực di chuyển theo hướng tiến (hoặc lùi)
-	GetPawn()->AddMovementInput(Forward, MovementVector.Y);
-}
-
-// Di chuyển sang trái/phải (theo trục X)
-void ARaceToFinishPlayerController::OnMoveRight(const FInputActionValue& Value)
-{
-	
-		const FVector2D MovementVector = Value.Get<FVector2D>();
-		const FVector Right = GetPawn()->GetActorRightVector();
-    
-		// Thêm lực di chuyển sang trái hoặc phải
-		GetPawn()->AddMovementInput(Right, MovementVector.X);
-    
-	// Nếu bạn muốn có sự kiện "Complete" cho MoveRight
-	// Bạn có thể trigger một event khi MoveRight kết thúc.
-}
-	
-
-	
-			/*
-			if (this != nullptr)
-			{
-				// find out which way is forward
-				const FRotator Rotation = GetControlRotation();
-				const FRotator YawRotation(0, Rotation.Yaw, 0);
-
-				// get forward vector
-				const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-	
-				// get right vector .
-				const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-
-				// add movement 
-				GetPawn()->AddMovementInput(ForwardDirection, MovementVector.Y);
-				GetPawn()->AddMovementInput(RightDirection, MovementVector.X);
-			}
-#1#
-*/
 
 
 

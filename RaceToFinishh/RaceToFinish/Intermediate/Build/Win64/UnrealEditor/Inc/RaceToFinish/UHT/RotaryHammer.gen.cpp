@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "RaceToFinish/Obstacle/RotaryHammer.h"
+#include "RaceToFinish/Obstacle/Rotary Hammer/RotaryHammer.h"
 #include "Runtime/Engine/Classes/Engine/HitResult.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeRotaryHammer() {}
@@ -38,7 +38,7 @@ struct Z_Construct_UFunction_ARotaryHammer_OnHammerOverlapBegin_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Handle overlap events\n" },
 #endif
-		{ "ModuleRelativePath", "Obstacle/RotaryHammer.h" },
+		{ "ModuleRelativePath", "Obstacle/Rotary Hammer/RotaryHammer.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Handle overlap events" },
 #endif
@@ -126,15 +126,15 @@ struct Z_Construct_UClass_ARotaryHammer_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "Obstacle/RotaryHammer.h" },
-		{ "ModuleRelativePath", "Obstacle/RotaryHammer.h" },
+		{ "IncludePath", "Obstacle/Rotary Hammer/RotaryHammer.h" },
+		{ "ModuleRelativePath", "Obstacle/Rotary Hammer/RotaryHammer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RotationSpeed_MetaData[] = {
 		{ "Category", "Rotation Settings" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Speed of rotation\n" },
 #endif
-		{ "ModuleRelativePath", "Obstacle/RotaryHammer.h" },
+		{ "ModuleRelativePath", "Obstacle/Rotary Hammer/RotaryHammer.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Speed of rotation" },
 #endif
@@ -144,7 +144,7 @@ struct Z_Construct_UClass_ARotaryHammer_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Knockback force\n" },
 #endif
-		{ "ModuleRelativePath", "Obstacle/RotaryHammer.h" },
+		{ "ModuleRelativePath", "Obstacle/Rotary Hammer/RotaryHammer.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Knockback force" },
 #endif
@@ -155,7 +155,7 @@ struct Z_Construct_UClass_ARotaryHammer_Statics
 		{ "Comment", "// Collision component\n" },
 #endif
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Obstacle/RotaryHammer.h" },
+		{ "ModuleRelativePath", "Obstacle/Rotary Hammer/RotaryHammer.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Collision component" },
 #endif
@@ -167,7 +167,7 @@ struct Z_Construct_UClass_ARotaryHammer_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ARotaryHammer_OnHammerOverlapBegin, "OnHammerOverlapBegin" }, // 574953688
+		{ &Z_Construct_UFunction_ARotaryHammer_OnHammerOverlapBegin, "OnHammerOverlapBegin" }, // 2807222186
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -221,14 +221,14 @@ ARotaryHammer::~ARotaryHammer() {}
 // End Class ARotaryHammer
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARotaryHammer, ARotaryHammer::StaticClass, TEXT("ARotaryHammer"), &Z_Registration_Info_UClass_ARotaryHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARotaryHammer), 3072456005U) },
+		{ Z_Construct_UClass_ARotaryHammer, ARotaryHammer::StaticClass, TEXT("ARotaryHammer"), &Z_Registration_Info_UClass_ARotaryHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARotaryHammer), 3265943650U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_3432211112(TEXT("/Script/RaceToFinish"),
-	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_RotaryHammer_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_492895444(TEXT("/Script/RaceToFinish"),
+	Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_TQPhuuuuu_Desktop_GitHub_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
