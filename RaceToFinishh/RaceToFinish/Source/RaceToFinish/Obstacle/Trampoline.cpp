@@ -11,49 +11,44 @@
 // Sets default values
 ATrampoline::ATrampoline()
 {
-	// Set this actor to call Tick() ádasdevery frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
-	CollisionBox = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
-	SetRootComponent(CollisionBox);
 
-	SpringMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("AmmoMesh"));
-	SpringMesh->SetupAttachment(CollisionBox);
+	// Create and initialize the box collision component
+	CollisionComp = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionComp"));
+	RootComponent = CollisionComp;
+	CollisionComp->InitBoxExtent(FVector(100.f, 100.f, 20.f));  // Kích thước box
+	CollisionComp->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	CollisionComp->SetCollisionResponseToAllChannels(ECR_Ignore);
+	CollisionComp->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
 
-	// Set default launch power
-	LaunchPower = 1000.0f;
-
-	// Bind overlap event
-	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &ATrampoline::OnOverlapBegin);
+	// Bind the overlap function
+	CollisionComp->OnComponentBeginOverlap.AddDynamic(this, &ATrampoline::OnOverlapBegin);
 }
-
 
 // Called when the game starts or when spawned
 void ATrampoline::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
 void ATrampoline::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	 
 }
 
-void ATrampoline::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+// Handle collision and apply launch force
+void ATrampoline::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	UKismetSystemLibrary::PrintString(this,"OnOverlapBegin");
-
-	// Check if the overlapping actor is a character
-	ACharacter* Character = Cast<ACharacter>(OtherActor);
-	if (Character)
+	if (OtherActor && OtherActor != this)
 	{
-		UKismetSystemLibrary::PrintString(this,"Character");
-		// Apply upward launch force
-		FVector LaunchVelocity = FVector(0, 0, LaunchPower);
-		Character->LaunchCharacter(LaunchVelocity, true, true);
+		ACharacter* Character = Cast<ACharacter>(OtherActor);
+		if (Character)
+		{
+			FVector LaunchDirection = FVector(0, 0, 1); // Direction upwards
+			Character->LaunchCharacter(LaunchDirection * LaunchStrength, true,true);
+		}
 	}
 }
 
