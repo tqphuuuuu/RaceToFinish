@@ -1,63 +1,70 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "SwingHammer.h"
-
 #include "Kismet/KismetSystemLibrary.h"
 #include "Net/UnrealNetwork.h"
-
 
 // Sets default values
 ASwingHammer::ASwingHammer()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	bReplicates = true;
+	SetReplicateMovement(true);
 	CurrentRotation = 0.0f;
-
 }
 
-// Called when the game starts or when spawned
 void ASwingHammer::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	if (HasAuthority()) // Chỉ server mới quản lý Timer
+	{
+		// Set timer để gọi server mỗi 0.0167 giây (60 FPS)
+		GetWorldTimerManager().SetTimer(
+			RotationTimerHandle,
+			this,
+			&ASwingHammer::ServerRotateHammer,
+			0.0167f, // Khoảng thời gian 1/60 giây cho 60 FPS
+			true
+		);
+	}
 }
 
-// Called every frame
 void ASwingHammer::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (HasAuthority())
-	{
-		// Update the current rotation based on the direction
-		CurrentRotation += RotationSpeed * RotationDirection * DeltaTime;
-    
-		// Clamp rotation to avoid overshooting max/min angles
-		if (CurrentRotation >= MaxRotation || CurrentRotation <= MinRotation)
-		{
-			// Reverse the direction if max or min rotation is reached
-			RotationDirection *= -1;
-		}
+}
 
-		// Apply the rotation to the actor
-		FRotator NewRotation = FRotator(CurrentRotation, 90.0f, 0.0f);  // Assuming we rotate around Yaw (Y-axis)
-		SetActorRotation(NewRotation);
-	}
-	else
+// Server thực hiện logic xoay
+void ASwingHammer::ServerRotateHammer_Implementation()
+{
+	if (HasAuthority()) // Server mới thực hiện logic xoay
 	{
-
-		// Apply the rotation to the actor (this will not affect the server)
-		FRotator NewRotation = FRotator(CurrentRotation, 90.0f, 0.0f);  // Assuming we rotate around Yaw (Y-axis)
-		SetActorRotation(NewRotation);
+		RotateHammer();
 	}
-	 
+}
+
+// Kiểm tra tính hợp lệ của Server RPC
+bool ASwingHammer::ServerRotateHammer_Validate()
+{
+	return true;
+}
+
+// Hàm thực hiện logic xoay
+void ASwingHammer::RotateHammer()
+{
+	CurrentRotation += RotationSpeed * RotationDirection * 0.0167f; // Timer gọi mỗi 0.0167 giây
+
+	if (CurrentRotation >= MaxRotation || CurrentRotation <= MinRotation)
+	{
+		RotationDirection *= -1; // Đảo ngược hướng nếu đạt góc tối đa hoặc tối thiểu
+	}
+
+	FRotator NewRotation = FRotator(CurrentRotation, 90.0f, 0.0f); 
+	SetActorRotation(NewRotation);
 }
 
 void ASwingHammer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME(ASwingHammer,CurrentRotation);
+	DOREPLIFETIME(ASwingHammer, CurrentRotation);
 }
-

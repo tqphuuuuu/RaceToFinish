@@ -18,9 +18,14 @@ struct FHitResult;
 #define RACETOFINISH_RotaryHammer_generated_h
 
 #define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execOnHammerOverlapBegin);
+	virtual void ServerRotateHammer_Implementation(); \
+	virtual void ClientRequestRotation_Implementation(); \
+	DECLARE_FUNCTION(execOnHammerOverlapBegin); \
+	DECLARE_FUNCTION(execServerRotateHammer); \
+	DECLARE_FUNCTION(execClientRequestRotation);
 
 
+#define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_10_CALLBACK_WRAPPERS
 #define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARotaryHammer(); \
@@ -47,6 +52,7 @@ public: \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_10_CALLBACK_WRAPPERS \
 	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_10_INCLASS_NO_PURE_DECLS \
 	FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_10_ENHANCED_CONSTRUCTORS \
 private: \

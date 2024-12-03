@@ -4,6 +4,7 @@
 #include "MovingBoard.h"
 
 #include "Kismet/KismetSystemLibrary.h"
+#include "Net/UnrealNetwork.h"
 
 
 // Sets default values
@@ -16,6 +17,8 @@ AMovingBoard::AMovingBoard()
 	MoveTime = 0.f;
 	bMoveForward = true;
 	Distance = 1000.f;
+	bReplicates = true;
+	SetReplicateMovement(true);
 }
 
 // Called when the game starts or when spawned
@@ -26,6 +29,15 @@ void AMovingBoard::BeginPlay()
 	StartLocation = GetActorLocation();
 	EndLocation = StartLocation + FVector(0.f, Distance, 0.f); // 1000 đơn vị di chuyển theo trục X
 	
+		GetWorldTimerManager().SetTimer(
+			MoveTimerHandle,
+			this,
+			&AMovingBoard::ClientMoveBoard,
+			TimerInterval,
+			true
+		);
+
+	
 }
 
 // Called every frame
@@ -33,18 +45,33 @@ void AMovingBoard::Tick(float DeltaTime)
 {
 
 	Super::Tick(DeltaTime);
-	MoveTime += DeltaTime;
-
 	// Nếu đang di chuyển về phía trước
 	
 }
+
+void AMovingBoard::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(AMovingBoard,bMoveForward);
+	DOREPLIFETIME(AMovingBoard,CurrentLocation);
+	DOREPLIFETIME(AMovingBoard,MoveTime);
+
+}
+
+void AMovingBoard::ClientMoveBoard_Implementation()
+{
+	MoveTime += TimerInterval;
+	MoveBoard();
+
+}
+
 void AMovingBoard::MoveBoard_Implementation()
 {
-	UKismetSystemLibrary::PrintString(this,"Tick");
 	if (bMoveForward)
 	{
+
 		// Di chuyển tấm ván về phía điểm kết thúc
-		SetActorLocation(FMath::Lerp(StartLocation, EndLocation, MoveTime * MoveSpeed / FVector::Distance(StartLocation, EndLocation)));
+		CurrentLocation = FMath::Lerp(StartLocation, EndLocation, MoveTime * MoveSpeed / FVector::Distance(StartLocation, EndLocation));
 		
 		// Kiểm tra nếu đã tới điểm kết thúc
 		if (MoveTime * MoveSpeed >= FVector::Distance(StartLocation, EndLocation))
@@ -52,12 +79,13 @@ void AMovingBoard::MoveBoard_Implementation()
 			// Đổi hướng di chuyển
 			bMoveForward = false;
 			MoveTime = 0.f; // Reset thời gian
+
 		}
 	}
 	else
 	{
 		// Di chuyển tấm ván về phía điểm bắt đầu
-		SetActorLocation(FMath::Lerp(EndLocation, StartLocation, MoveTime * MoveSpeed / FVector::Distance(StartLocation, EndLocation)));
+		CurrentLocation = FMath::Lerp(EndLocation, StartLocation, MoveTime * MoveSpeed / FVector::Distance(StartLocation, EndLocation));
 		
 		// Kiểm tra nếu đã về đến vị trí ban đầu
 		if (MoveTime * MoveSpeed >= FVector::Distance(StartLocation, EndLocation))
@@ -67,5 +95,7 @@ void AMovingBoard::MoveBoard_Implementation()
 			MoveTime = 0.f; // Reset thời gian
 		}
 	}
+	SetActorLocation(CurrentLocation);
+
 }
 

@@ -25,22 +25,25 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-private:
+	
 	// Components
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* SpringMesh;
 
-	UPROPERTY(VisibleAnywhere)
-	UBoxComponent* CollisionBox;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Coli")
+	class USphereComponent* CollisionBox;
 
+
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+private:
 	// Adjustable launch power
 	UPROPERTY(EditAnywhere, Category="Spring Settings")
 	float LaunchPower;
 
 	// Function to handle overlap
-	UFUNCTION()
-	void OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, 
-						UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, 
-						bool bFromSweep, const FHitResult& SweepResult);
+
 
 };

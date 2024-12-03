@@ -32,10 +32,13 @@ public:
 	float MoveSpeed;
 
 	// Thời gian chuyển động
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Time Move")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Time Move",Replicated)
 	float MoveTime;
 
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Move")
+	UPROPERTY(Replicated)
+	FVector CurrentLocation;
+	
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Move",Replicated)
 	bool bMoveForward;
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Distance")
@@ -44,6 +47,12 @@ public:
 	UFUNCTION(Server,unreliable	)
 	void MoveBoard();
 
+	FTimerHandle MoveTimerHandle;
+	float TimerInterval = 0.0167f;
+
+	UFUNCTION(Client,Unreliable)
+	void ClientMoveBoard();
+	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
 	
 };
 

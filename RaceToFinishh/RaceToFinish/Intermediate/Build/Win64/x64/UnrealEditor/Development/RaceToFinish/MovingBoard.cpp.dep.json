@@ -10,7 +10,9 @@
             "e:\\racetofinish\\racetofinishh\\racetofinish\\intermediate\\build\\win64\\unrealeditor\\inc\\racetofinish\\uht\\movingboard.generated.h",
             "e:\\ue5.4\\5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
             "e:\\ue5.4\\5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
-            "e:\\ue5.4\\5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h"
+            "e:\\ue5.4\\5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "e:\\ue5.4\\5.4\\engine\\source\\runtime\\engine\\public\\net\\unrealnetwork.h",
+            "e:\\ue5.4\\5.4\\engine\\source\\runtime\\net\\core\\public\\net\\core\\propertyconditions\\propertyconditions.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

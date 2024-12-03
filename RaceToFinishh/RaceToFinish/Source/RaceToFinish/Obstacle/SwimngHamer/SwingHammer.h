@@ -15,34 +15,39 @@ public:
 	// Sets default values for this actor's properties
 	ASwingHammer();
 
+	// Timer handle
+	FTimerHandle RotationTimerHandle;
+
+	// Client gọi Server thực hiện việc xoay
+
+	// Server thực hiện xoay
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerRotateHammer();
+
+	void RotateHammer();
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Rotation speed and limits
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Swing Hammer")
-	float RotationSpeed = 45.0f; // Rotation speed in degrees per second
+	float RotationSpeed = 45.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Swing Hammer")
-	float MaxRotation = 90.0f; // Max rotation angle
+	float MaxRotation = 90.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Swing Hammer")
-	float MinRotation = -90.0f; // Min rotation angle
+	float MinRotation = -90.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SwingHammer")
+	int32 RotationDirection = 1;
 
 private:
-	// The current rotation of the hammer
 	UPROPERTY(Replicated)
 	float CurrentRotation;
 
-	// Direction of rotation (1 for clockwise, -1 for counter-clockwise)
-	UPROPERTY()
-	int32 RotationDirection = 1;
-
-
-	// Network function to replicate CurrentRotation
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 };

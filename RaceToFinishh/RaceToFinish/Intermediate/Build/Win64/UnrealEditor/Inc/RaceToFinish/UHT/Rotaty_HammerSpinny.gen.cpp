@@ -79,10 +79,10 @@ ARotaty_HammerSpinny::~ARotaty_HammerSpinny() {}
 struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_Rotaty_HammerSpinny_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARotaty_HammerSpinny, ARotaty_HammerSpinny::StaticClass, TEXT("ARotaty_HammerSpinny"), &Z_Registration_Info_UClass_ARotaty_HammerSpinny, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARotaty_HammerSpinny), 239367929U) },
+		{ Z_Construct_UClass_ARotaty_HammerSpinny, ARotaty_HammerSpinny::StaticClass, TEXT("ARotaty_HammerSpinny"), &Z_Registration_Info_UClass_ARotaty_HammerSpinny, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARotaty_HammerSpinny), 2060137261U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_Rotaty_HammerSpinny_h_3080825049(TEXT("/Script/RaceToFinish"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_Rotaty_HammerSpinny_h_2469663637(TEXT("/Script/RaceToFinish"),
 	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_Rotaty_HammerSpinny_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_Rotaty_HammerSpinny_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

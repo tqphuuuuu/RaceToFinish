@@ -15,7 +15,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define RACETOFINISH_MovingBoard_generated_h
 
 #define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_MovingBoard_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void ClientMoveBoard_Implementation(); \
 	virtual void MoveBoard_Implementation(); \
+	DECLARE_FUNCTION(execClientMoveBoard); \
 	DECLARE_FUNCTION(execMoveBoard);
 
 
@@ -26,7 +28,15 @@ private: \
 	friend struct Z_Construct_UClass_AMovingBoard_Statics; \
 public: \
 	DECLARE_CLASS(AMovingBoard, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RaceToFinish"), NO_API) \
-	DECLARE_SERIALIZER(AMovingBoard)
+	DECLARE_SERIALIZER(AMovingBoard) \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		MoveTime=NETFIELD_REP_START, \
+		CurrentLocation, \
+		bMoveForward, \
+		NETFIELD_REP_END=bMoveForward	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_MovingBoard_h_12_ENHANCED_CONSTRUCTORS \

@@ -11,6 +11,8 @@ ARotaryHammer::ARotaryHammer()
 	// Initialize default values
 	RotationSpeed = 100.0f;
 	KnockbackForce = 1000.0f;
+	bReplicates = true;
+	SetReplicateMovement(true);    
 
 	// Create and configure the collision box
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
@@ -24,10 +26,6 @@ ARotaryHammer::ARotaryHammer()
 }
 
 // Called when the game starts or when spawned
-void ARotaryHammer::BeginPlay()
-{
-	Super::BeginPlay();
-}
 
 // Called every frame
 void ARotaryHammer::Tick(float DeltaTime)
@@ -38,10 +36,53 @@ void ARotaryHammer::Tick(float DeltaTime)
 	RotateAroundAxis(RotationSpeed);
 }
 
+void ARotaryHammer::BeginPlay()
+{
+	Super::BeginPlay();
+
+	if (HasAuthority()) // Chỉ server mới đặt Timer
+	{
+		GetWorldTimerManager().SetTimer(
+			RotationTimerHandle,
+			this,
+			&ARotaryHammer::ClientRequestRotation,
+			0.0167f, 
+			true
+		);
+	}
+}
+
+// Client RPC: Yêu cầu xoay
+void ARotaryHammer::ClientRequestRotation_Implementation()
+{
+	if (!HasAuthority())
+	{
+		ServerRotateHammer();
+	}
+}
+
+// Server RPC: Xoay búa
+void ARotaryHammer::ServerRotateHammer_Implementation()
+{
+	if (HasAuthority())
+	{
+		RotateAroundAxis(RotationSpeed);
+	}
+}
+
+// Logic xoay
 void ARotaryHammer::RotateAroundAxis(float Speed)
 {
-	FRotator RotationDelta(0.f, Speed * GetWorld()->DeltaTimeSeconds, 0.f);
+	
+	float FixedDeltaTime = 0.1f; // Khoảng thời gian cố định cho mỗi lần gọi Timer
+	FRotator RotationDelta(0.f, Speed * FixedDeltaTime, 0.f);
 	AddActorLocalRotation(RotationDelta);
+}
+
+void ARotaryHammer::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	
 }
 
 void ARotaryHammer::OnHammerOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -49,12 +90,9 @@ void ARotaryHammer::OnHammerOverlapBegin(UPrimitiveComponent* OverlappedComponen
 	ACharacter* Character = Cast<ACharacter>(OtherActor);
 	if (Character && Character->GetCharacterMovement())
 	{
-		// Calculate knockback direction
 		FVector HammerLocation = GetActorLocation();
 		FVector CharacterLocation = Character->GetActorLocation();
 		FVector KnockbackDirection = (CharacterLocation - HammerLocation).GetSafeNormal();
-
-		// Apply knockback force
 		Character->LaunchCharacter(KnockbackDirection * KnockbackForce, true, true);
 	}
 }

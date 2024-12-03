@@ -3,6 +3,7 @@
 
 #include "Trampoline.h"
 
+#include "Components/SphereComponent.h"
 #include "GameFramework/Character.h"
 #include "Kismet/KismetSystemLibrary.h"
 
@@ -10,22 +11,16 @@
 // Sets default values
 ATrampoline::ATrampoline()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() ádasdevery frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	SpringMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SpringMesh"));
-	RootComponent = SpringMesh;
+	CollisionBox = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
+	SetRootComponent(CollisionBox);
 
-	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
-	CollisionBox->SetupAttachment(RootComponent);
+	SpringMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("AmmoMesh"));
+	SpringMesh->SetupAttachment(CollisionBox);
 
 	// Set default launch power
 	LaunchPower = 1000.0f;
-
-	// Enable overlap events
-	CollisionBox->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-	CollisionBox->SetCollisionObjectType(ECollisionChannel::ECC_WorldDynamic);
-	CollisionBox->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
-	CollisionBox->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Overlap);
 
 	// Bind overlap event
 	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &ATrampoline::OnOverlapBegin);
@@ -46,9 +41,8 @@ void ATrampoline::Tick(float DeltaTime)
 	 
 }
 
-void ATrampoline::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, 
-								   UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, 
-								   bool bFromSweep, const FHitResult& SweepResult)
+void ATrampoline::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	UKismetSystemLibrary::PrintString(this,"OnOverlapBegin");
 

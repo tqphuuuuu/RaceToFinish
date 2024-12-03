@@ -21,6 +21,47 @@ RACETOFINISH_API UClass* Z_Construct_UClass_ARotaryHammer_NoRegister();
 UPackage* Z_Construct_UPackage__Script_RaceToFinish();
 // End Cross Module References
 
+// Begin Class ARotaryHammer Function ClientRequestRotation
+static const FName NAME_ARotaryHammer_ClientRequestRotation = FName(TEXT("ClientRequestRotation"));
+void ARotaryHammer::ClientRequestRotation()
+{
+	UFunction* Func = FindFunctionChecked(NAME_ARotaryHammer_ClientRequestRotation);
+	ProcessEvent(Func,NULL);
+}
+struct Z_Construct_UFunction_ARotaryHammer_ClientRequestRotation_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// H\xc3\xa0m client \xc4\x91\xc6\xb0\xe1\xbb\xa3""c g\xe1\xbb\x8di t\xe1\xbb\xab Timer\n" },
+#endif
+		{ "ModuleRelativePath", "Obstacle/Rotary Hammer/RotaryHammer.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "H\xc3\xa0m client \xc4\x91\xc6\xb0\xe1\xbb\xa3""c g\xe1\xbb\x8di t\xe1\xbb\xab Timer" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARotaryHammer_ClientRequestRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARotaryHammer, nullptr, "ClientRequestRotation", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01020C40, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARotaryHammer_ClientRequestRotation_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARotaryHammer_ClientRequestRotation_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ARotaryHammer_ClientRequestRotation()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARotaryHammer_ClientRequestRotation_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ARotaryHammer::execClientRequestRotation)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientRequestRotation_Implementation();
+	P_NATIVE_END;
+}
+// End Class ARotaryHammer Function ClientRequestRotation
+
 // Begin Class ARotaryHammer Function OnHammerOverlapBegin
 struct Z_Construct_UFunction_ARotaryHammer_OnHammerOverlapBegin_Statics
 {
@@ -108,12 +149,55 @@ DEFINE_FUNCTION(ARotaryHammer::execOnHammerOverlapBegin)
 }
 // End Class ARotaryHammer Function OnHammerOverlapBegin
 
+// Begin Class ARotaryHammer Function ServerRotateHammer
+static const FName NAME_ARotaryHammer_ServerRotateHammer = FName(TEXT("ServerRotateHammer"));
+void ARotaryHammer::ServerRotateHammer()
+{
+	UFunction* Func = FindFunctionChecked(NAME_ARotaryHammer_ServerRotateHammer);
+	ProcessEvent(Func,NULL);
+}
+struct Z_Construct_UFunction_ARotaryHammer_ServerRotateHammer_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// H\xc3\xa0m server th\xe1\xbb\xb1""c hi\xe1\xbb\x87n xoay\n" },
+#endif
+		{ "ModuleRelativePath", "Obstacle/Rotary Hammer/RotaryHammer.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "H\xc3\xa0m server th\xe1\xbb\xb1""c hi\xe1\xbb\x87n xoay" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARotaryHammer_ServerRotateHammer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARotaryHammer, nullptr, "ServerRotateHammer", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00220C40, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARotaryHammer_ServerRotateHammer_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARotaryHammer_ServerRotateHammer_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ARotaryHammer_ServerRotateHammer()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARotaryHammer_ServerRotateHammer_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ARotaryHammer::execServerRotateHammer)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ServerRotateHammer_Implementation();
+	P_NATIVE_END;
+}
+// End Class ARotaryHammer Function ServerRotateHammer
+
 // Begin Class ARotaryHammer
 void ARotaryHammer::StaticRegisterNativesARotaryHammer()
 {
 	UClass* Class = ARotaryHammer::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientRequestRotation", &ARotaryHammer::execClientRequestRotation },
 		{ "OnHammerOverlapBegin", &ARotaryHammer::execOnHammerOverlapBegin },
+		{ "ServerRotateHammer", &ARotaryHammer::execServerRotateHammer },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -167,7 +251,9 @@ struct Z_Construct_UClass_ARotaryHammer_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ARotaryHammer_ClientRequestRotation, "ClientRequestRotation" }, // 2347317559
 		{ &Z_Construct_UFunction_ARotaryHammer_OnHammerOverlapBegin, "OnHammerOverlapBegin" }, // 2807222186
+		{ &Z_Construct_UFunction_ARotaryHammer_ServerRotateHammer, "ServerRotateHammer" }, // 4231492245
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -224,10 +310,10 @@ ARotaryHammer::~ARotaryHammer() {}
 struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARotaryHammer, ARotaryHammer::StaticClass, TEXT("ARotaryHammer"), &Z_Registration_Info_UClass_ARotaryHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARotaryHammer), 3265943650U) },
+		{ Z_Construct_UClass_ARotaryHammer, ARotaryHammer::StaticClass, TEXT("ARotaryHammer"), &Z_Registration_Info_UClass_ARotaryHammer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARotaryHammer), 2122006590U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_492895444(TEXT("/Script/RaceToFinish"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_702192313(TEXT("/Script/RaceToFinish"),
 	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_Rotary_Hammer_RotaryHammer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

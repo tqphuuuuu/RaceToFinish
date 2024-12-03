@@ -79,10 +79,10 @@ AMoving_ObstacleRail::~AMoving_ObstacleRail() {}
 struct Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_Moving_ObstacleRail_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMoving_ObstacleRail, AMoving_ObstacleRail::StaticClass, TEXT("AMoving_ObstacleRail"), &Z_Registration_Info_UClass_AMoving_ObstacleRail, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMoving_ObstacleRail), 3402701096U) },
+		{ Z_Construct_UClass_AMoving_ObstacleRail, AMoving_ObstacleRail::StaticClass, TEXT("AMoving_ObstacleRail"), &Z_Registration_Info_UClass_AMoving_ObstacleRail, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMoving_ObstacleRail), 3782907949U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_Moving_ObstacleRail_h_2933086700(TEXT("/Script/RaceToFinish"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_Moving_ObstacleRail_h_2754379407(TEXT("/Script/RaceToFinish"),
 	Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_Moving_ObstacleRail_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RaceToFinish_RaceToFinishh_RaceToFinish_Source_RaceToFinish_Obstacle_MovingBoard_Moving_ObstacleRail_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
